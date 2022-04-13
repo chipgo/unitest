@@ -45,3 +45,9 @@ func TestTwoBigFloat(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkTwoBigFloat(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		TwoBigFloat("0.12345111111110001", "0.12345")
+	}
+}
